@@ -1,7 +1,8 @@
 <?php
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\SiteContato;
+use App\Models\SiteContato;
 
 class SiteContatoSeeder extends Seeder
 {

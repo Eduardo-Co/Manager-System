@@ -45,7 +45,8 @@ Route::middleware(['autenticacao:padrao,visitante,p3,p4'])->prefix('/app')->grou
     Route::get('/fornecedor/editar/{id}/{msg?}', [FornecedorController::class, 'editar'])->name('app.fornecedor.editar');
     Route::get('/fornecedor/excluir/{id}/{msg?}', [FornecedorController::class, 'excluir'])->name('app.fornecedor.excluir');
 
-    Route::get('/produto', [ProdutoController::class, 'index'])->name('app.produto');
+
+    Route::resource('produto', 'ProdutoController');
 });
 
 Route::get('/teste/{p1}/{p2}', [TesteController::class, 'teste'])->name('site.teste');
